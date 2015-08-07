@@ -73,6 +73,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070003;
+        /**  第一个表示新的activity创建进入效果，第2个表示activity还没有finish()下退出效果，第3个表示上一个activity返回进入效果，第4个表示的是activity finish()之后退出效果 
+         */
         public static final int fade=0x7f070001;
     }
 }

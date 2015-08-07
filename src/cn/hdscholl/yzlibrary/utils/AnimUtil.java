@@ -3,8 +3,10 @@ package cn.hdscholl.yzlibrary.utils;
 
 import cn.hdschool.yzlibrary.R;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
 
 public class AnimUtil {
 	/**返回一个不断围绕中心点不断旋转的动画*/
@@ -24,6 +26,21 @@ public class AnimUtil {
 	{
 		AlphaAnimation anim = new AlphaAnimation(fromAlpha, toAlpha);
 		anim.setDuration(durationMillis);
+		return anim;
+	}
+	
+	/**返回一个位移动画*/
+	public static TranslateAnimation getTranslateAnimation(float fromX, float fromY, float toX, float toY, long durationMills)
+	{
+		TranslateAnimation anim = new TranslateAnimation(fromX, toX, fromY, toY);
+		anim.setDuration(durationMills);
+		return anim;
+	}
+	
+	public static TranslateAnimation getTranslateAnimationBySelf(float fromX, float fromY, float toX, float toY, long durationMills)
+	{
+		TranslateAnimation anim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, fromX, Animation.RELATIVE_TO_SELF, toX, Animation.RELATIVE_TO_SELF, fromY, Animation.RELATIVE_TO_SELF, toY);
+		anim.setDuration(durationMills);
 		return anim;
 	}
 }
