@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <integer name="animation_duration">200</integer>
+    <!-- 淡入淡出动画 -->
+    <style name="activity_switch_fade" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_fade_out</item>
+    </style>
+
+    <!-- 左边滑入左边滑出 -->
+    <style name="activity_switch_translate_left" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_left</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_left" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_left2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2left</item>
+    </style>
+
+    <!-- 右边滑入右边滑出 -->
+    <style name="activity_switch_translate_right" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_right</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_right" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_right2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2right</item>
+    </style>
+
+    <!-- 顶部滑入顶部滑出 -->
+    <style name="activity_switch_translate_top" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_top</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_top" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_top2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2top</item>
+    </style>
+
+    <!-- 底部滑入底部滑出 -->
+    <style name="activity_switch_translate_bottom" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_bottom</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_bottom" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_bottom2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_no_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2bottom</item>
+    </style>
+
+    <!-- 顶部滑入底部滑出 -->
+    <style name="activity_switch_translate_top_bottom" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_top_bottom</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_top_bottom" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_top2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_translate_screen2bottom</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_translate_bottom2screen</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2top</item>
+    </style>
+
+    <!-- 底部滑入顶部滑出 -->
+    <style name="activity_switch_translate_bottom_top" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_bottom_top</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_bottom_top" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_bottom2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_translate_screen2top</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_translate_top2screen</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2bottom</item>
+    </style>
+
+    <!-- 左边滑入右边滑出 -->
+    <style name="activity_switch_translate_left_right" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_left_right</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_left_right" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_left2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_translate_screen2right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_translate_right2screen</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2left</item>
+    </style>
+
+    <!-- 右边滑入左边滑出 -->
+    <style name="activity_switch_translate_right_left" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/translate_right_left</item>
+    </style>
+    <!--
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    -->
+    <style name="translate_right_left" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/act_switch_translate_right2screen</item>
+        <item name="android:activityOpenExitAnimation">@anim/act_switch_translate_screen2left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/act_switch_translate_left2screen</item>
+        <item name="android:activityCloseExitAnimation">@anim/act_switch_translate_screen2right</item>
+    </style>
+
+</resources>

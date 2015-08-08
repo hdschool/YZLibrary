@@ -37,9 +37,17 @@ public class AnimUtil {
 		return anim;
 	}
 	
+	/**返回一个位移动画，参数值相对于自己，为0.0到1.0*/
 	public static TranslateAnimation getTranslateAnimationBySelf(float fromX, float fromY, float toX, float toY, long durationMills)
 	{
 		TranslateAnimation anim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, fromX, Animation.RELATIVE_TO_SELF, toX, Animation.RELATIVE_TO_SELF, fromY, Animation.RELATIVE_TO_SELF, toY);
+		anim.setDuration(durationMills);
+		return anim;
+	}
+	/**返回一个位移动画，参数值相对于parent，为0.0到1.0*/
+	public static TranslateAnimation getTranslateAnimationByParent(float fromX, float fromY, float toX, float toY, long durationMills)
+	{
+		TranslateAnimation anim = new TranslateAnimation(Animation.RELATIVE_TO_PARENT, fromX, Animation.RELATIVE_TO_PARENT, toX, Animation.RELATIVE_TO_PARENT, fromY, Animation.RELATIVE_TO_PARENT, toY);
 		anim.setDuration(durationMills);
 		return anim;
 	}

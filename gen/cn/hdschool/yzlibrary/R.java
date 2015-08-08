@@ -9,10 +9,19 @@ package cn.hdschool.yzlibrary;
 
 public final class R {
     public static final class anim {
-        public static final int alpha_animation=0x7f040000;
-        public static final int fade_in=0x7f040001;
-        public static final int fade_out=0x7f040002;
-        public static final int rotate_animation=0x7f040003;
+        public static final int act_switch_fade_in=0x7f040000;
+        public static final int act_switch_fade_out=0x7f040001;
+        public static final int act_switch_no_anim=0x7f040002;
+        public static final int act_switch_translate_bottom2screen=0x7f040003;
+        public static final int act_switch_translate_left2screen=0x7f040004;
+        public static final int act_switch_translate_right2screen=0x7f040005;
+        public static final int act_switch_translate_screen2bottom=0x7f040006;
+        public static final int act_switch_translate_screen2left=0x7f040007;
+        public static final int act_switch_translate_screen2right=0x7f040008;
+        public static final int act_switch_translate_screen2top=0x7f040009;
+        public static final int act_switch_translate_top2screen=0x7f04000a;
+        public static final int alpha_animation=0x7f04000b;
+        public static final int rotate_animation=0x7f04000c;
     }
     public static final class attr {
     }
@@ -23,30 +32,32 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int toast_bg=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090001;
-        public static final int bt=0x7f090000;
+        public static final int action_settings=0x7f0a0001;
+        public static final int bt=0x7f0a0000;
+    }
+    public static final class integer {
+        public static final int animation_duration=0x7f050000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
+        public static final int action_settings=0x7f080001;
+        public static final int app_name=0x7f080000;
+        public static final int hello_world=0x7f080002;
     }
     public static final class style {
-        public static final int Anim_fade=0x7f070000;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -68,13 +79,145 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070002;
+        public static final int AppBaseTheme=0x7f060012;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070003;
-        /**  第一个表示新的activity创建进入效果，第2个表示activity还没有finish()下退出效果，第3个表示上一个activity返回进入效果，第4个表示的是activity finish()之后退出效果 
+        public static final int AppTheme=0x7f060013;
+        /**  淡入淡出动画 
          */
-        public static final int fade=0x7f070001;
+        public static final int activity_switch_fade=0x7f060000;
+        /**  底部滑入底部滑出 
+         */
+        public static final int activity_switch_translate_bottom=0x7f060008;
+        /**  底部滑入顶部滑出 
+         */
+        public static final int activity_switch_translate_bottom_top=0x7f06000c;
+        /**  左边滑入左边滑出 
+         */
+        public static final int activity_switch_translate_left=0x7f060002;
+        /**  左边滑入右边滑出 
+         */
+        public static final int activity_switch_translate_left_right=0x7f06000e;
+        /**  右边滑入右边滑出 
+         */
+        public static final int activity_switch_translate_right=0x7f060004;
+        /**  右边滑入左边滑出 
+         */
+        public static final int activity_switch_translate_right_left=0x7f060010;
+        /**  顶部滑入顶部滑出 
+         */
+        public static final int activity_switch_translate_top=0x7f060006;
+        /**  顶部滑入底部滑出 
+         */
+        public static final int activity_switch_translate_top_bottom=0x7f06000a;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int fade=0x7f060001;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_bottom=0x7f060009;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_bottom_top=0x7f06000d;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_left=0x7f060003;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_left_right=0x7f06000f;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_right=0x7f060005;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_right_left=0x7f060011;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_top=0x7f060007;
+        /** 
+    第一个表示新的activity创建进入效果，
+    第2个表示activity还没有finish()下退出效果，
+    第3个表示上一个activity返回进入效果，
+    第4个表示的是activity finish()之后退出效果
+   	比如有两个activity A和B, A上面有个按钮可以打开B, 点击按钮后，此时A执行第二个动画（android:activityOpenExitAnimation）
+   	B执行第一个动画(android:activityOpenEnterAnimation)
+   	如此此时按下返回键,B退出，A显示，则此时A执行动画3（android:activityCloseEnterAnimation）
+   	B执行动画4（android:activityCloseExitAnimation）
+    
+         */
+        public static final int translate_top_bottom=0x7f06000b;
     }
 }
