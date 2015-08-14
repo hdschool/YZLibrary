@@ -25,15 +25,54 @@ public final class R {
     }
     public static final class attr {
     }
+    public static final class color {
+        public static final int ampm_text_color=0x7f07000a;
+        public static final int blue=0x7f070005;
+        public static final int calendar_header=0x7f070008;
+        public static final int circle_background=0x7f070001;
+        public static final int darker_blue=0x7f070006;
+        public static final int date_picker_text_normal=0x7f070007;
+        public static final int date_picker_view_animator=0x7f070009;
+        public static final int done_text_color_disabled=0x7f070004;
+        public static final int done_text_color_normal=0x7f070003;
+        public static final int line_background=0x7f070002;
+        public static final int numbers_text_color=0x7f07000b;
+        public static final int transparent_black=0x7f07000c;
+        public static final int white=0x7f070000;
+    }
     public static final class dimen {
-        /**  Default screen margins, per the Android Design guidelines. 
-
+        /** 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
+        public static final int activity_horizontal_margin=0x7f08001a;
+        public static final int ampm_label_size=0x7f080013;
+        public static final int ampm_left_padding=0x7f080014;
+        public static final int date_picker_component_width=0x7f080001;
+        public static final int date_picker_header_height=0x7f080002;
+        public static final int date_picker_header_text_size=0x7f08000c;
+        public static final int date_picker_view_animator_height=0x7f080004;
+        public static final int day_number_select_circle_radius=0x7f080007;
+        public static final int day_number_size=0x7f08000e;
+        public static final int done_label_size=0x7f080000;
+        public static final int extra_time_label_margin=0x7f080012;
+        public static final int header_height=0x7f080016;
+        public static final int minimum_margin_sides=0x7f080018;
+        public static final int minimum_margin_top_bottom=0x7f080019;
+        public static final int month_day_label_text_size=0x7f080006;
+        public static final int month_label_size=0x7f08000d;
+        public static final int month_list_item_header_height=0x7f080005;
+        public static final int month_select_circle_radius=0x7f080008;
+        public static final int picker_dimen=0x7f080017;
+        public static final int selected_calendar_layout_height=0x7f080003;
+        public static final int selected_date_day_size=0x7f08000a;
+        public static final int selected_date_month_size=0x7f08000b;
+        public static final int selected_date_year_size=0x7f080009;
+        public static final int separator_padding=0x7f080015;
+        public static final int time_label_size=0x7f080011;
+        public static final int year_label_height=0x7f08000f;
+        public static final int year_label_text_size=0x7f080010;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
@@ -44,12 +83,11 @@ public final class R {
         public static final int toast_bg=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0005;
-        public static final int bt=0x7f0a0000;
-        public static final int bt2=0x7f0a0001;
-        public static final int bt_ok_dialog_ok=0x7f0a0004;
-        public static final int tv_ok_dialog_message=0x7f0a0003;
-        public static final int tv_ok_dialog_title=0x7f0a0002;
+        public static final int action_settings=0x7f0b0004;
+        public static final int bt_ok_dialog_ok=0x7f0b0003;
+        public static final int main=0x7f0b0000;
+        public static final int tv_ok_dialog_message=0x7f0b0002;
+        public static final int tv_ok_dialog_title=0x7f0b0001;
     }
     public static final class integer {
         public static final int animation_duration=0x7f050000;
@@ -59,12 +97,22 @@ public final class R {
         public static final int ok_dialog_layout=0x7f030001;
     }
     public static final class menu {
-        public static final int main=0x7f090000;
+        public static final int main=0x7f0a0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f080001;
-        public static final int app_name=0x7f080000;
-        public static final int hello_world=0x7f080002;
+        public static final int action_settings=0x7f09000b;
+        public static final int ampm_circle_radius_multiplier=0x7f090003;
+        public static final int app_name=0x7f09000a;
+        public static final int circle_radius_multiplier=0x7f090000;
+        public static final int circle_radius_multiplier_24HourMode=0x7f090001;
+        public static final int hello_world=0x7f09000c;
+        public static final int numbers_radius_multiplier_inner=0x7f090005;
+        public static final int numbers_radius_multiplier_normal=0x7f090004;
+        public static final int numbers_radius_multiplier_outer=0x7f090006;
+        public static final int selection_radius_multiplier=0x7f090002;
+        public static final int text_size_multiplier_inner=0x7f090008;
+        public static final int text_size_multiplier_normal=0x7f090007;
+        public static final int text_size_multiplier_outer=0x7f090009;
     }
     public static final class style {
         /** 
